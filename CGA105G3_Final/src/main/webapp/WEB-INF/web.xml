@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>CGA105G3</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/TimeToTravel</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<!--MemberServlet XML Begin -->
+	<servlet>
+		<servlet-name>MemberServlet</servlet-name>
+		<servlet-class>com.member.controller.MemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/back_end/member/member.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/front_end/member/member.do</url-pattern>
+	</servlet-mapping>
+	<!--MemberServlet XML end -->
+
+	<!-- EmpServlet xml start -->
+	<servlet>
+		<servlet-name>EmpServlet</servlet-name>
+		<servlet-class>com.emp.controller.EmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpServlet</servlet-name>
+		<url-pattern>/back_end/emp/emp.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EmpServlet</servlet-name>
+		<url-pattern>/front_end/emp/emp.do</url-pattern>
+	</servlet-mapping>
+	<!-- EmpServlet xml end -->
+
+	<!-- EmpFuncServlet xml start -->
+	<servlet>
+		<servlet-name>EmpFuncServlet</servlet-name>
+		<servlet-class>com.empfunc.controller.EmpFuncServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpFuncServlet</servlet-name>
+		<url-pattern>/back_end/empFunc/empFunc.do</url-pattern>
+	</servlet-mapping>
+	<!-- EmpFuncServlet xml end -->
+
+	<!-- FirmServlet xml start -->
+	<servlet>
+		<servlet-name>FirmServlet</servlet-name>
+		<servlet-class>com.firm.controller.FirmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FirmServlet</servlet-name>
+		<url-pattern>/back_end/firm/firm.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FirmServlet</servlet-name>
+		<url-pattern>/front_end/firm/firm.do</url-pattern>
+	</servlet-mapping>
+	<!-- FirmServlet xml end -->
+
+	<!--TicketServlet Begin -->
+	<servlet>
+		<servlet-name>TicketServlet</servlet-name>
+		<servlet-class>com.ticket.controller.TicketServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketServlet</servlet-name>
+		<url-pattern>/back_end/ticket/ticket.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TicketServlet</servlet-name>
+		<url-pattern>/front_end/ticket/ticket.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TicketServlet</servlet-name>
+		<url-pattern>/front_end/member/ticket.do</url-pattern>
+	</servlet-mapping>
+	<!--TicketServlet End -->
+
+	<!--TicketComment Begin -->
+	<servlet>
+		<servlet-name>TicketCommentServlet</servlet-name>
+		<servlet-class>com.ticketcomment.controller.TicketCommentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketCommentServlet</servlet-name>
+		<url-pattern>/front_end/ticket/comment.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TicketCommentServlet</servlet-name>
+		<url-pattern>/front_end/member/comment.do</url-pattern>
+	</servlet-mapping>
+	<!--TicketComment End -->
+
+	<!--TicketList Begin -->
+	<servlet>
+		<servlet-name>TktListServlet</servlet-name>
+		<servlet-class>com.tktlist.controller.TktListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TktListServlet</servlet-name>
+		<url-pattern>/front_end/ticket/list.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TktListServlet</servlet-name>
+		<url-pattern>/front_end/member/list.do</url-pattern>
+	</servlet-mapping>
+	<!--TicketList End -->
+
+	<!--ShoppingListServlet Begin -->
+	<servlet>
+		<servlet-name>ShoppingListServlet</servlet-name>
+		<servlet-class>com.shoppinglist.controller.ShoppingListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingListServlet</servlet-name>
+		<url-pattern>/front_end/ticket/shoppinglist.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShoppingListServlet</servlet-name>
+		<url-pattern>/front_end/member/shoppinglist.do</url-pattern>
+	</servlet-mapping>
+	<!--ShoppingListServlet End -->
+
+	<!--TktImgServlet Begin -->
+	<servlet>
+		<servlet-name>TktImgServlet</servlet-name>
+		<servlet-class>com.tktimg.controller.TktImgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TktImgServlet</servlet-name>
+		<url-pattern>/back_end/tktimg/ticketIMG.do</url-pattern>
+	</servlet-mapping>
+	<!--TktImgServlet End -->
+
+	<!--TicketPromoteServlet Begin -->
+	<servlet>
+		<servlet-name>TicketPromoteServlet</servlet-name>
+		<servlet-class>com.ticketpromote.controller.TicketPromoteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TicketPromoteServlet</servlet-name>
+		<url-pattern>/back_end/ticketpromote/ticketpromote.do</url-pattern>
+	</servlet-mapping>
+	<!--TicketPromoteServlet End -->
+
+	<!--TktOrderServlet Begin -->
+	<servlet>
+		<servlet-name>TktOrderServlet</servlet-name>
+		<servlet-class>com.tktorder.controller.TktOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TktOrderServlet</servlet-name>
+		<url-pattern>/back_end/ticketorder/tktorder.do</url-pattern>
+	</servlet-mapping>
+	<!--TktOrderServlet End -->
+
+	<!--PicServlet Begin -->
+	<servlet>
+		<servlet-name>PicServlet</servlet-name>
+		<servlet-class>com.images.controller.PicServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PicServlet</servlet-name>
+		<url-pattern>/PicServlet</url-pattern>
+	</servlet-mapping>
+	<!--PicServlet End -->
+
+
+	<!--ArticleServlet XML Begin -->
+	<servlet>
+		<servlet-name>ArticleServlet</servlet-name>
+		<servlet-class>com.article.controller.ArticleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArticleServlet</servlet-name>
+		<url-pattern>/front_end/article/article.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ArticleServlet</servlet-name>
+		<url-pattern>/back_end/article/article.do</url-pattern>
+	</servlet-mapping>
+	<!--ArticleServlet XML End -->
+
+	<!--CommentServlet XML Begin -->
+	<servlet>
+		<servlet-name>CommentServlet</servlet-name>
+		<servlet-class>com.comment.controller.CommentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/front_end/article/comment.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/back_end/article/comment.do</url-pattern>
+	</servlet-mapping>
+	<!--CommentServlet XML End -->
+
+	<!--ArticleReportServlet XML Begin -->
+	<servlet>
+		<servlet-name>ArticleReportServlet</servlet-name>
+		<servlet-class>com.articlereport.controller.ArticleReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArticleReportServlet</servlet-name>
+		<url-pattern>/front_end/article/articleReport.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ArticleReportServlet</servlet-name>
+		<url-pattern>/back_end/article/articleReport.do</url-pattern>
+	</servlet-mapping>
+	<!--ArticleReportServlet XML End -->
+
+	<!--CommentReportServlet XML Begin -->
+	<servlet>
+		<servlet-name>CommentReportServlet</servlet-name>
+		<servlet-class>com.commentreport.controller.CommentReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommentReportServlet</servlet-name>
+		<url-pattern>/front_end/article/commentReport.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentReportServlet</servlet-name>
+		<url-pattern>/back_end/article/commentReport.do</url-pattern>
+	</servlet-mapping>
+	<!--CommentReportServlet XML End -->
+
+	<!-- NewsServlet start -->
+	<servlet>
+		<servlet-name>NewsServlet</servlet-name>
+		<servlet-class>com.news.controller.NewsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/front_end/news/news.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewsServlet</servlet-name>
+		<url-pattern>/back_end/news/news.do</url-pattern>
+	</servlet-mapping>
+	<!--NewsServlet end -->
+
+	<!-- QaServlet start -->
+	<servlet>
+		<servlet-name>QaServlet</servlet-name>
+		<servlet-class>com.qa.controller.QaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QaServlet</servlet-name>
+		<url-pattern>/back_end/qa/qa.do</url-pattern>
+	</servlet-mapping>
+
+	<!--QaServlet end -->
+
+	<!-- QaclassServlet start -->
+	<servlet>
+		<servlet-name>QaclassServlet</servlet-name>
+		<servlet-class>com.qaclass.controller.QaclassServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QaclassServlet</servlet-name>
+		<url-pattern>/front_end/qaclass/qaclass.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>QaclassServlet</servlet-name>
+		<url-pattern>/front_end/qa/qa.do</url-pattern>
+	</servlet-mapping>
+	<!--QaclassServlet end -->
+
+	<!--Filter XML Begin -->
+	<filter>
+		<filter-name>MemberFilter</filter-name>
+		<filter-class>com.member.filter.MemberFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/front_end/article/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/front_end/ticket/ticket.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/front_end/ticket/shoppinglist.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/front_end/ticket/list.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>MemberFilter</filter-name>
+		<url-pattern>/front_end/ticket/browseTicket.jsp</url-pattern>
+	</filter-mapping>
+	<!--Filter XML end -->
+	
+	<filter>
+	    <filter-name>EmpFilter</filter-name>
+	   	<filter-class>com.emp.filter.EmpFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+	    <filter-name>EmpFilter</filter-name>
+	    <url-pattern>/back_end/index/index.jsp</url-pattern>
+  	</filter-mapping>
+  	<filter-mapping>
+	    <filter-name>EmpFilter</filter-name>
+	    <url-pattern>/back_end/emp/select_page.jsp</url-pattern>
+  	</filter-mapping>
+  	 <filter-mapping>
+	    <filter-name>EmpFilter</filter-name>
+	    <url-pattern>/back_end/empFunc/listAllEmpFunc.jsp</url-pattern>
+  	</filter-mapping>
+  	 <filter-mapping>
+	    <filter-name>EmpFilter</filter-name>
+	    <url-pattern>/back_end/firm/select_page.jsp</url-pattern>
+  	</filter-mapping>
+	
+	
+</web-app>
